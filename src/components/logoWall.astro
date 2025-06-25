@@ -1,69 +1,46 @@
 ---
-const technologies = [
-  "astro",
-  "vue",
-  "react",
-  "typeScript",
-  "tailwindcss",
-  "next",
-  "nodejs",
-  "HTML5",
-  "CSS3",
-  "javaScript",
-  "git",
-  "supabase",
-  "mysql",
-  "bash",
+const LOGOS = [
+  "java.svg",
+  "mysql.svg",
+  "oracle.svg",
+  "python.svg",
+  "php.svg",
+  "html.svg",
+  "css.svg",
+  "androidstudio.svg",
+  "blender.svg",
+  "git.svg",
+  "github.svg",
 ];
 ---
 
-<div class="relative overflow-x-hidden py-8">
+<div class="overflow-hidden whitespace-nowrap group mt-20 py-12">
   <div
-    class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
+    class="flex justify-center items-center animate-loop-scroll group-hover:paused gap-16"
   >
-  </div>
-  <div
-    class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
-  >
-  </div>
-
-  <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
     {
-      [...technologies, ...technologies, ...technologies].map((tech) => (
-        <div class="flex items-center gap-2 group transition-all duration-300">
-          <img
-            src={`/svg/${tech}.svg`}
-            alt={tech}
-            class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
-            width="30"
-            height="30"
-            loading="lazy"
-          />
-          <span class="text-lg font-medium text-[var(--white-icon)]">
-            {tech.charAt(0).toUpperCase() + tech.slice(1)}
-          </span>
-        </div>
+      LOGOS.map((logo) => (
+        <img
+          src={`https://cdn.simpleicons.org/${logo.split(".")[0]}/white`}
+          alt={logo.split(".")[0]}
+          class="h-10 w-auto"
+        />
       ))
     }
   </div>
 </div>
 
-<style is:global>
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  .animate-scroll {
-    animation: scroll 60s linear infinite;
+<style>
+  .animate-loop-scroll {
+    animation: loop-scroll 20s linear infinite;
   }
 
-  @media (min-width: 768px) {
-    .animate-scroll {
-      animation-duration: 50s;
+  @keyframes loop-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
     }
   }
 </style>
