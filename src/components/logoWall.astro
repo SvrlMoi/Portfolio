@@ -5,8 +5,8 @@ const LOGOS = [
   "oracle.svg",
   "python.svg",
   "php.svg",
-  "html.svg",
-  "css.svg",
+  "html5.svg",
+  "css3.svg",
   "androidstudio.svg",
   "blender.svg",
   "git.svg",
@@ -27,12 +27,22 @@ const LOGOS = [
         />
       ))
     }
+    {
+      LOGOS.map((logo) => (
+        <img
+          src={`https://cdn.simpleicons.org/${logo.split(".")[0]}/white`}
+          alt={logo.split(".")[0]}
+          class="h-10 w-auto"
+        />
+      ))
+    }
   </div>
 </div>
 
 <style>
   .animate-loop-scroll {
-    animation: loop-scroll 20s linear infinite;
+    width: calc(2 * (11 * (2.5rem + 4rem)));
+    animation: loop-scroll 40s linear infinite;
   }
 
   @keyframes loop-scroll {
