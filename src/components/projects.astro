@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 // CÓDIGO CORREGIDO: Ahora importa la imagen real de tu proyecto desde la carpeta 'public'.
 import projectImage from "../../public/proyecto-futbol.png";
+import trackerImage from "../../public/tracker.png";
 
 
 interface Project {
@@ -22,6 +23,13 @@ const projects: Project[] = [
     // Apuntar al repo es una buena opción.
     preview: "https://github.com/SvrlMoi/Semestral---Progr.-II",
     status: "Academic Project",
+  },
+  {
+    title: "Smart Attendance Tracker",
+    image: trackerImage,
+    link: "https://github.com/SvrlMoi/attendance-tracker",
+    preview: "https://github.com/SvrlMoi/attendance-tracker",
+    status: "Serverless Architecture",
   },
 ];
 ---
