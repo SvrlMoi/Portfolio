@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 // CÓDIGO CORREGIDO: Ahora importa la imagen real de tu proyecto desde la carpeta 'public'.
 import projectImage from "../../public/proyecto-futbol.png";
 import trackerImage from "../../public/tracker.png";
+import workImage from "../../public/gidemi1.png";
 
 
 interface Project {
@@ -31,6 +32,13 @@ const projects: Project[] = [
     preview: "https://github.com/SvrlMoi/attendance-tracker",
     status: "Serverless Architecture",
   },
+  {
+  title: "Corporate Web Development",
+  image: workImage,
+  link: "https://gidemi.utp.ac.pa/",
+  preview: "https://gidemi.utp.ac.pa/",
+  status: "Professional Experience",
+},
 ];
 ---
 
