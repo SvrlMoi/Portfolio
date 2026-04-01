@@ -45,11 +45,19 @@ const SkillsList = () => {
       "MySQL",
       "PL/SQL (Oracle)",
     ],
-    "Frontend Development": ["HTML", "CSS"],
+    "Frontend Development": [
+      "HTML",
+      "CSS",
+      "Astro",
+      "TypeScript",
+      "TailwindCSS",
+      "React",
+    ],
     "Platforms & Tools": [
       "Android Studio",
       "Blender",
-      "Git y GitHub",
+      "Git",
+      "GitHub",
     ],
   };
 
